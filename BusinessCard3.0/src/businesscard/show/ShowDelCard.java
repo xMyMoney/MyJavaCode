@@ -1,0 +1,17 @@
+package businesscard.show;
+
+import javax.swing.JOptionPane;
+
+import businesscard.biz.BusinessCardvOne;
+import businesscard.entity.BusinessCard;
+
+public class ShowDelCard {
+	BusinessCardvOne biz = new BusinessCardvOne();
+	public ShowDelCard(BusinessCard card) {
+		String answer = JOptionPane.showInputDialog(null, "ÇëÉ÷ÖØ¿¼ÂÇ£¬É¾³ýÇëÊäÈëyes");
+        if ("yes".equals(answer))// equals×Ö·û´®¶Ô±È
+        	biz.delCard(card);
+            JOptionPane.showMessageDialog(null, "É¾³ý³É¹¦");
+    }
+
+}
